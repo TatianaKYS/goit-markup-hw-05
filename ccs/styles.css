@@ -165,6 +165,7 @@ font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+    transition: colour 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -244,7 +245,7 @@ font-family: 'Roboto', sans-serif;
         padding-right: 32px;       
         display: block;
         margin: 0 auto;
-        
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -253,6 +254,7 @@ font-family: 'Roboto', sans-serif;
 .modal-btn:hover  {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: var(--accent-color-hover);
+
 
 }
 
@@ -340,15 +342,23 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-
 .menu-link:hover,
 .menu-link:focus {
     color: var(--accent-text-color);
+}
+.contact-email {
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-email:hover,
 .contact-email:focus {
     color: var(--accent-text-color);
+}
+
+.contact-phone-number {
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-phone-number:hover,
@@ -406,6 +416,7 @@ font-family: 'Roboto', sans-serif;
     height: 40px;
     border-radius: 50%;
     background-color: #4D5AE5;
+    transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -423,7 +434,7 @@ background-color: var(--accent-color-hover);
         height: 40px;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.1);;
-        
+        transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .social-list-link-footer:hover,
@@ -475,7 +486,7 @@ background-color: var(--accent-color-hover);
 .customers-list-icon {
 
     fill: #8E8F99;
-    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-list-link:hover .customers-list-icon,
@@ -501,6 +512,70 @@ font-family: 'Roboto', sans-serif;
         margin-bottom: 16px;
 }
 
+/* MODAL WINDOW */
+
+.backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+background-color: rgba(46, 47, 66, 0.4);;
+}
+
+.modal {
+    width: 408px;
+    height: 576px;
+    background-color: #FCFCFC;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* MODAL WINDOW */
+
+
+.overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-images-group:hover .overlay {
+    transform: translate(0, 0);
+}
+
+.modal-close-btn {
+    
+    background-color: var(--btn-color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    
+    
+    
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+
+    background-color: var(--accent-color-hover);
+}
+
+.modal-close-btn:hover .modal-btn-icon,
+.modal-close-btn:focus .modal-btn-icon {
+    
+    fill: var(--main-text-title);
+}
+
 
 
 
@@ -519,7 +594,8 @@ font-family: 'Roboto', sans-serif;
         padding-bottom: 12px;
         padding-left: 24px;
         padding-right: 24px;
-        
+        transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+       
 }
 
 .filter-btn:hover,
@@ -606,6 +682,7 @@ font-family: 'Roboto', sans-serif;
 } */
 .portfolio-images-group {
     border: 0.5px solid #F4F4FD;
+    transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     
 }
 
@@ -647,4 +724,31 @@ margin-bottom: 48px;
     margin-right: 120px;
 
 }
+
+/* OVERLAY PORTFOLIO */
+.overlay {
+    background-color:var(--accent-text-color) ;
+    font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;    
+        letter-spacing: 0.02em;
+        color: var(--item-list-color);
+        padding-top: 40px;
+        padding-bottom: 164px;
+        padding-right: 32px;
+        padding-left: 32px;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        transform: translate(0,100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
 
